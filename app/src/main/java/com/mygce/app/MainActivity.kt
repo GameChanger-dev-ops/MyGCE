@@ -3,39 +3,37 @@ package com.mygce.app
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
+import com.mygce.app.countdown.countdownFor
+import com.mygce.app.data.ExamDateStore
+import com.mygce.app.ui.HomeScreen
+import java.time.LocalDate
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val store = ExamDateStore(this)
         setContent {
+            var examDate by remember { mutableStateOf(store.load()) }
             MaterialTheme {
-                Surface(modifier = Modifier.fillMaxSize()) { SkeletonScreen() }
+                Surface(modifier = Modifier.fillMaxSize()) {
+                    HomeScreen(
+                        // "Today" is read on each recomposition so a reopened app is never a day stale.
+                        countdown = countdownFor(LocalDate.now(), examDate),
+                        onExamDateChosen = {
+                            store.save(it)
+                            examDate = it
+                        },
+                    )
+                }
             }
         }
-    }
-}
-
-// Placeholder only: real screens arrive in Phase 2. Kept minimal so CI proves the toolchain.
-@Composable
-private fun SkeletonScreen() {
-    Column(
-        modifier = Modifier.fillMaxSize().padding(24.dp),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally,
-    ) {
-        Text(stringResource(R.string.skeleton_title), style = MaterialTheme.typography.headlineLarge)
-        Text(stringResource(R.string.skeleton_subtitle), style = MaterialTheme.typography.bodyLarge)
     }
 }

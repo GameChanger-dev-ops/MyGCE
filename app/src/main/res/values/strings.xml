@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">MyGCE</string>
-    <string name="skeleton_title">MyGCE</string>
-    <string name="skeleton_subtitle">GCE revision, offline. Coming soon.</string>
+
+    <string name="home_title">MyGCE</string>
+    <string name="home_tagline">GCE O Level revision, offline</string>
+
+    <string name="countdown_not_set">Set your exam date to start the countdown</string>
+    <string name="countdown_today">Your exam is today. Good luck!</string>
+    <plurals name="countdown_upcoming">
+        <item quantity="one">%d day to your exam</item>
+        <item quantity="other">%d days to your exam</item>
+    </plurals>
+    <plurals name="countdown_passed">
+        <item quantity="one">Your exam date passed %d day ago</item>
+        <item quantity="other">Your exam date passed %d days ago</item>
+    </plurals>
+    <string name="exam_date_set">Set exam date</string>
+    <string name="exam_date_change">Change exam date</string>
+    <string name="exam_date_hint">Check the date on the official GCE timetable</string>
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_cancel">Cancel</string>
+
+    <string name="subjects_heading">Subjects</string>
+    <string name="subject_mathematics">Mathematics</string>
+    <string name="subject_english_language">English Language</string>
+    <string name="subject_biology">Biology</string>
+    <string name="subject_chemistry">Chemistry</string>
+    <string name="subject_coming_soon">Questions coming soon</string>
 </resources>

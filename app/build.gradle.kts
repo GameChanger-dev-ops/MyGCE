@@ -13,8 +13,8 @@ android {
         // Android 8.0: covers the cheap phones students use. DECISIONS/0001 [verify against target devices].
         minSdk = 26
         targetSdk = 35
-        versionCode = 1
-        versionName = "0.1.0-p1"
+        versionCode = 2
+        versionName = "0.2.0-p2"
     }
 
     buildTypes {
