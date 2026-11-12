@@ -1,27 +1,31 @@
 # Current state
 
-_Updated 2026-11-11 by Claude (cloud session), Phase 0. Keep under ~60 lines; overwrite stale lines.
+_Updated 2026-11-12 by Claude (cloud session), Phase 1. Keep under ~60 lines; overwrite stale lines.
 Evidence labels: CI ✓ · local ✓ · device ✓ (phone) · unverified._
 
 ## Snapshot
-- Repo was empty (LICENSE only). Phase 0 adds rules files and docs on branch `claude/phase0-rules`.
-- No app code, no CI, no build yet.
+- `main` = initial commit only. Phase 0 (rules/docs) on `claude/phase0-rules`, not yet merged.
+- Phase 1 skeleton (empty Compose app + CI) on `claude/phase1-skeleton`, stacked on Phase 0.
+  Version `0.1.0-p1`. No real features, no tests yet.
 
 ## Verified
-Nothing about the app yet (no code exists).
+| Area | Evidence |
+|---|---|
+| Skeleton builds, lint passes | unverified until MyGCE CI runs (no Android SDK in cloud) |
 
 ## Unverified / open
-- What the competitor (MyGCE-style apps) actually contains: size, offline behaviour, subjects, ads, price.
-- Rights to use GCE Board / school past papers (licensing letter not yet sent).
-- Student demand and willingness to pay (interviews not yet done).
-- Google Play billing rules for Cameroon (read before any payment work).
-- Everything Claude Code (ECC): unverified, not installed (docs/AI_WORKFLOW.md).
+- Competitor (MyGCE-style apps) size, offline behaviour, subjects, ads, price.
+- Rights to GCE Board / school past papers (licensing letter not sent).
+- Student demand and willingness to pay (interviews not done).
+- Google Play billing rules for Cameroon.
+- Everything Claude Code (ECC): unverified, not installed.
+- No app icon yet (lint warning only).
 
 ## Blockers
-None for the skeleton. Content rights block shipping real questions.
+Content rights block shipping real questions, not the skeleton.
 
 ## Decisions to respect
-0001 product scope and MVP.
+0001 scope and MVP · 0002 toolchain and CI (Sipwise versions).
 
 ## Next action
-Owner reviews and merges the Phase 0 PR; then GO for Phase 1 (empty Compose app + CI).
+Get CI green on the Phase 1 draft PR, owner installs the debug APK and sees the MyGCE screen.
