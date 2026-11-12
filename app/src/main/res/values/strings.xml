@@ -2,29 +2,40 @@
 <resources>
     <string name="app_name">MyGCE</string>
 
+    <string name="studio_full_name">Game Changer Studios</string>
+    <string name="studio_word">Studios</string>
+    <string name="studio_tagline">GAME CHANGER</string>
+
     <string name="home_title">MyGCE</string>
     <string name="home_tagline">GCE O Level revision, offline</string>
 
-    <string name="countdown_not_set">Set your exam date to start the countdown</string>
-    <string name="countdown_today">Your exam is today. Good luck!</string>
-    <plurals name="countdown_upcoming">
-        <item quantity="one">%d day to your exam</item>
-        <item quantity="other">%d days to your exam</item>
+    <string name="countdown_not_set_title">When is your exam?</string>
+    <string name="countdown_not_set_body">Pick your exam date to start the countdown.</string>
+    <string name="countdown_today_title">Exam day</string>
+    <string name="countdown_today_body">Good luck. You have prepared for this.</string>
+    <plurals name="countdown_label_upcoming">
+        <item quantity="one">day to your exam</item>
+        <item quantity="other">days to your exam</item>
     </plurals>
-    <plurals name="countdown_passed">
-        <item quantity="one">Your exam date passed %d day ago</item>
-        <item quantity="other">Your exam date passed %d days ago</item>
+    <plurals name="countdown_label_passed">
+        <item quantity="one">day since your exam date</item>
+        <item quantity="other">days since your exam date</item>
     </plurals>
+    <string name="exam_date_on">Exam date: %1$s</string>
     <string name="exam_date_set">Set exam date</string>
-    <string name="exam_date_change">Change exam date</string>
-    <string name="exam_date_hint">Check the date on the official GCE timetable</string>
+    <string name="exam_date_change">Change date</string>
+    <string name="exam_date_hint">Check the date on the official GCE timetable.</string>
     <string name="dialog_ok">OK</string>
     <string name="dialog_cancel">Cancel</string>
 
-    <string name="subjects_heading">Subjects</string>
+    <string name="subjects_heading">Your subjects</string>
     <string name="subject_mathematics">Mathematics</string>
     <string name="subject_english_language">English Language</string>
     <string name="subject_biology">Biology</string>
     <string name="subject_chemistry">Chemistry</string>
-    <string name="subject_coming_soon">Questions coming soon</string>
+    <string name="subject_initials_mathematics">Ma</string>
+    <string name="subject_initials_english_language">En</string>
+    <string name="subject_initials_biology">Bi</string>
+    <string name="subject_initials_chemistry">Ch</string>
+    <string name="subject_coming_soon">Coming soon</string>
 </resources>
