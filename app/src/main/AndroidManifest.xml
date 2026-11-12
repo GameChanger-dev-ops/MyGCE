@@ -3,6 +3,8 @@
 
     <!-- No permissions: the MVP is offline-only (DECISIONS/0001). Pack download will need INTERNET later. -->
     <application
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:allowBackup="false"
         android:label="@string/app_name"
         android:supportsRtl="true"
