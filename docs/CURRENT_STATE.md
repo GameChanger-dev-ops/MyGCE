@@ -11,7 +11,8 @@ Evidence labels: CI ✓ · local ✓ · device ✓ (phone) · unverified._
 ## Verified
 | Area | Evidence |
 |---|---|
-| Skeleton builds, lint passes | unverified until MyGCE CI runs (no Android SDK in cloud) |
+| Skeleton builds, unit tests (none yet) and lint pass; debug APK produced | CI ✓ run 43175455671 (commit 5d6e59a) |
+| APK installs and shows the MyGCE screen on a phone | unverified (owner to test) |
 
 ## Unverified / open
 - Competitor (MyGCE-style apps) size, offline behaviour, subjects, ads, price.
